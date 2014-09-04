@@ -73,9 +73,8 @@ define(["jquery", "text!./simpletablethemed.css"], function($, cssContent) {'use
 			canTakeSnapshot : true
 		},
 		paint : function($element) {
-			console.log(this.backendApi.model.properties);
-			var stripeSettings = this.backendApi.model.properties.striping;
-			var stripeCount = this.backendApi.model.properties.striping.freq;
+			var stripeSettings = this.backendApi.model.layout.striping;
+			var stripeCount = this.backendApi.model.layout.striping.freq;
 			//console.log(this.backendApi.model.properties.extraSettings.esStripes);
 			var html = "<table><thead><tr>", self = this, lastrow = 0, morebutton = false;
 			//render titles
